@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background: #222;
+  color: #d1d5db;
+  font-family: "Share Tech Mono", monospace;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Share Tech Mono", monospace;
+  color: #25c712;
+}
+
+thead {
+  background: #1d1d1d;
+}
+
+thead tr {
+  background: #111;
+}
+
+tbody {
+  border-color: #111 !important;
+}
+
+tr {
+  border-color: #111 !important;
+}
+
+.exchange-listings {
+  border: 2px #25c712 solid;
+}
+
+.react-select-container {
+  background-color: #1e1e1e !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+.react-select__control {
+  background-color: transparent !important;
+  color: #222 !important;
+  border-color: #111 !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+.css-1okebmr-indicatorSeparator {
+  background-color: #111 !important;
+}
+
+.css-tlfecz-indicatorContainer {
+  color: #111 !important;
+}
+
+.react-select__input-container,
+.react-select__menu {
+  color: #222 !important;
+}
+
+svg {
+  display: inline;
+}
+
+button {
+  background: #3349ff;
+}
+
+button:hover {
+  background: #2e42e7;
+}
+
+input {
+  background: #555;
+  color: #fafafa !important;
+}
+
+.twitter,
+.exchange,
+.holaplex,
+.formfunction {
+  display: block;
+  margin-right: 30px;
+  vertical-align: middle;
+  margin-top: 15px;
+}
+
+.twitter img {
+  width: 30px;
+  height: 30px;
+  display: inline;
+  vertical-align: middle;
+}
+
+.exchange-art {
+  width: 180px;
+  height: 30px;
+}
+
+.exchange-art svg {
+  display: inline;
+}
+
+.formfunction-svg {
+  display: inline;
+  margin-right: 10px;
+}
+
+.form-select {
+  background-color: #1e1e1e !important;
+  color: #888;
+  border-color: #444 !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select-container {
+  position: relative;
+  display: inline;
+}
+
+.select-container:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.select-container:after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: 70%;
+  right: 10px;
+  border-top: 8px solid #888;
+}
+
+.select-container-days:after {
+  right: 24px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+table tr {
+  overflow: hidden !important;
+}
+
+thead {
+  background: #1d1d1d;
+}
+
+tbody {
+  border-color: #111 !important;
+  background: #1d1d1d;
+}
+
+tr {
+  border-color: #111 !important;
+}
+
+.loader {
+  border-top-color: #3498db;
+  -webkit-animation: spinner 1.5s linear infinite;
+  animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.middle {
+  position: absolute;
+  top: calc(50% - 0.625rem);
+  left: calc(50% - 2.375rem);
+}
