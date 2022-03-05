@@ -1,6 +1,6 @@
-# 21dao
+# 21 dao
 
-This is the frontend for the 21dao website. The 21dao is a not for profit dao that supports artists and art on the Solana blockchain. Decisions are made by voting/council members of the dao.
+This is the frontend for the 21 dao website. The 21 dao is a not for profit dao that supports artists and art on the Solana blockchain. Decisions are made by voting/council members of the dao.
 
 ## Updating Artists
 
