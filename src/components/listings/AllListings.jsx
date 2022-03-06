@@ -72,9 +72,9 @@ export default function AllListings(props) {
                   title=""
                 >
                   {listing.image.split(".").pop().startsWith("mp4") ? (
-                    <Video url={listing.image} />
+                    <Video url={listing.image} mint={listing.mint} />
                   ) : (
-                    <Image url={listing.image} />
+                    <Image url={listing.image} mint={listing.mint} />
                   )}
                 </a>
               </div>

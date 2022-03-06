@@ -1,6 +1,6 @@
 const dev = {
-  apiHost: "http://localhost:3001",
-  host: "http://localhost:3001",
+  apiHost: "https://dao21-api-me4qf.ondigitalocean.app",
+  host: "https://dao21-7su7t.ondigitalocean.app",
 };
 
 const prod = {

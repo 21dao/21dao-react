@@ -29,9 +29,9 @@ export default function LiveAuctions(props) {
               title=""
             >
               {auction.image.split(".").pop().startsWith("mp4") ? (
-                <Video url={auction.image} />
+                <Video url={auction.image} mint={auction.mint} />
               ) : (
-                <Image url={auction.image} />
+                <Image url={auction.image} mint={auction.mint} />
               )}
             </a>
           </div>
