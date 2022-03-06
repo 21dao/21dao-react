@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-export default function ArtistListing(props) {
+export default function AllArtists(props) {
   const artists = props.artists;
   const [items, setItems] = useState([]);
   const navigate = useNavigate();

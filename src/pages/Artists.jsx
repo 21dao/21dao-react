@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import getArtists from "../data/artists/getArtists";
-import ArtistListing from "../components/ArtistListing";
+import AllArtists from "../components/artists/AllArtists";
 import MainNavigation from "./nav/MainNavigation";
 import Select from "react-select";
 import {
@@ -80,7 +80,7 @@ export default function Artists() {
             classNamePrefix="react-select"
           />
         </div>
-        <ArtistListing artists={resultSet} />
+        <AllArtists artists={resultSet} />
       </div>
     </div>
   );
