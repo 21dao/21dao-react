@@ -14,3 +14,4 @@ export const rpcHost = "https://ssc-dao.genesysgo.net/";
 export const apiHost = config.apiHost;
 export const host = config.host;
 export const loginMessage = "Please sign this message to log-in. ";
+export const cdnUrl = "https://cdn.looksrare.so";

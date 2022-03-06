@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { cdnUrl } from "../config/settings";
 
 export default function Image(props) {
   const [url, setUrl] = useState();
@@ -6,11 +7,15 @@ export default function Image(props) {
 
   useEffect(() => {
     setLoaded(false);
-    setUrl(props.url);
+    setUrl(`${cdnUrl}/${props.mint}`);
   }, [props.url]);
 
   const imageLoaded = () => {
     setLoaded(true);
+  };
+
+  const addDefaultSrc = () => {
+    setUrl(props.url);
   };
 
   return (
@@ -21,6 +26,7 @@ export default function Image(props) {
           alt=""
           className="w-full object-center object-cover lg:w-full rounded-lg"
           onLoad={imageLoaded}
+          onError={addDefaultSrc}
         />
       </div>
       <div className="middle">

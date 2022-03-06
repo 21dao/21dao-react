@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { cdnUrl } from "../config/settings";
 
 export default function Video(props) {
   const [url, setUrl] = useState();
@@ -6,11 +7,15 @@ export default function Video(props) {
 
   useEffect(() => {
     setLoaded(false);
-    setUrl(props.url);
+    setUrl(`${cdnUrl}/${props.mint}`);
   }, [props.url]);
 
   const videoLoaded = () => {
     setLoaded(true);
+  };
+
+  const addDefaultSrc = () => {
+    setUrl(props.url);
   };
 
   return (
@@ -24,6 +29,7 @@ export default function Video(props) {
           id="video"
           className="w-full object-center object-cover lg:w-full cursor-pointer rounded-lg"
           onLoadedData={videoLoaded}
+          onError={addDefaultSrc}
         >
           <source src={url} type="video/mp4" />
           Your browser does not support the video tag.
