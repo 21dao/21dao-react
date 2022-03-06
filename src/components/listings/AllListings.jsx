@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ArtistData from "../../data/artists/artists.json";
 import Select from "react-select";
 import { nameOpts, searchResultSet } from "../../utils/artistFilterHelpers";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -17,7 +16,10 @@ export default function AllListings(props) {
   const [sortBy, setSortBy] = useState("newest");
 
   useEffect(() => {
-    setArtistNames(nameOpts(ArtistData));
+    let data = listings.map((listing) => {
+      return { name: listing.brand.name };
+    });
+    setArtistNames(nameOpts(data));
   }, [listings]);
 
   useEffect(() => {
@@ -69,7 +71,7 @@ export default function AllListings(props) {
             >
               <div className="w-full min-h-80 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none cursor-pointer">
                 <a
-                  href={`https://exchange.art/single/${listing.mint}`}
+                  href={`https://exchange.art/single/${listing.mintKey}`}
                   title=""
                 >
                   {listing.image.split(".").pop().startsWith("mp4") ? (
