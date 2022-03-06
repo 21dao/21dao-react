@@ -7,7 +7,6 @@ import HolaplexLink from "../components/links/HolaplexLink";
 import FormfunctionLink from "../components/links/FormfunctionLink";
 import ArtistBreadcrumbs from "./nav/ArtistBreadcrumbs";
 import MainNavigation from "./nav/MainNavigation";
-import ExchangeListings from "../components/listings/ExchangeListings";
 
 export default function Artist() {
   const [artist, setArtist] = useState();
@@ -69,7 +68,6 @@ export default function Artist() {
                 />
               </div>
             </div>
-            <ExchangeListings name={artist.name} />
           </div>
         </>
       )}

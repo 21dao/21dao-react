@@ -1,22 +1,15 @@
 import axios from "axios";
+import ArtistData from "../artists/artists.json";
 
-async function getListings(name) {
+async function getListings() {
   try {
-    let response = await getFromUrl(0, name);
-    var total = response.data.totalCountOfResults;
+    let names = ArtistData.map((artist) => {
+      return artist.name;
+    });
+    let response = await getFromUrl(0, names);
     var results = [];
     for (const token of response.data.tokens) {
       if (token.isListed) results.push(token);
-    }
-    total -= 20;
-    var from = 20;
-    while (total > 0) {
-      let response = await getFromUrl(from, name);
-      for (const token of response.data.tokens) {
-        if (token.isListed) results.push(token);
-      }
-      from += 20;
-      total -= 20;
     }
     return results;
   } catch (error) {
@@ -24,12 +17,12 @@ async function getListings(name) {
   }
 }
 
-async function getFromUrl(from, name) {
+async function getFromUrl(from, names) {
   let url =
-    "https://api.exchange.art/v1/public/tokens?limit=20&from=" +
+    "https://api.exchange.art/v1/public/tokens?limit=10000&from=" +
     from +
     '&filters={"tokenStatus":["curated","certified","known"],"brands":["' +
-    name +
+    names.join('","') +
     '"]}';
   let response = await axios.get(url);
   return response;

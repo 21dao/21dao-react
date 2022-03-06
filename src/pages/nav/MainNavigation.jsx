@@ -48,6 +48,17 @@ export default function MainNavigation(props) {
               >
                 Auctions
               </a>
+              <a
+                href="/listings"
+                title="Listings"
+                className={`py-4 px-2 font-semibold ${
+                  props.page === "listings"
+                    ? "text-gray-200"
+                    : "text-gray-400 hover:text-gray-200"
+                }`}
+              >
+                Listings
+              </a>
             </div>
           </div>
           {/* <!-- Mobile menu button --> */}
@@ -98,6 +109,17 @@ export default function MainNavigation(props) {
               }`}
             >
               Auctions
+            </a>
+            <a
+              href="/listings"
+              title="Listings"
+              className={`block text-sm py-4 px-2 font-semibold ${
+                props.page === "listings"
+                  ? "text-black bg-gray-500"
+                  : "text-gray-200 hover:text-black"
+              }`}
+            >
+              Listings
             </a>
           </li>
         </ul>
