@@ -8,7 +8,7 @@ export default function Video(props) {
   useEffect(() => {
     setLoaded(false);
     setUrl(`${cdnUrl}/${props.mint}`);
-  }, [props.url]);
+  }, [props.url, props.mint]);
 
   const videoLoaded = () => {
     setLoaded(true);
@@ -19,7 +19,7 @@ export default function Video(props) {
   };
 
   return (
-    <div>
+    <div style={{ minHeight: "100px" }}>
       <div className={loaded ? "opacity-100 duration-1000" : "opacity-0"}>
         <video
           autoPlay
