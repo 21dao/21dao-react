@@ -118,7 +118,7 @@ export function selectAuctionView(size, callback) {
           Ending Soon
         </option>
         <option value="most_bids">Most Bids</option>
-        <option value="least_bids">Least Bids</option>
+        <option value="least_bids">Fewest Bids</option>
         <option value="highest">Highest Bid</option>
         <option value="lowest">Lowest Bid</option>
       </select>
