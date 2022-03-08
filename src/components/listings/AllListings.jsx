@@ -75,9 +75,9 @@ export default function AllListings(props) {
                   title=""
                 >
                   {listing.image.split(".").pop().startsWith("mp4") ? (
-                    <Video url={listing.image} mint={listing.mint} />
+                    <Video url={listing.image} mint={listing.mintKey} />
                   ) : (
-                    <Image url={listing.image} mint={listing.mint} />
+                    <Image url={listing.image} mint={listing.mintKey} />
                   )}
                 </a>
               </div>
@@ -87,7 +87,7 @@ export default function AllListings(props) {
                   <p></p>
                   <p className="mt-1 text-sm">
                     <span>◎ {listing.lastListedPrice / 1000000000}</span>
-                    {listing.last_sale_price && (
+                    {listing.lastSalePrice && (
                       <span className="float-right text-gray-400">
                         Last sale ◎ {listing.lastSalePrice / 1000000000}
                       </span>
