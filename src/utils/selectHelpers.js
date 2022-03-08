@@ -109,16 +109,18 @@ export function selectAuctionView(size, callback) {
                   ease-in-out
                   m-0
                   mt-4
-                  ml-4
                   pr-8
+                  sm:ml-4
                   focus:outline-none`}
         onChange={callback}
       >
         <option value="ending" defaultValue>
           Ending Soon
         </option>
-        <option value="bids">Most Bids</option>
+        <option value="most_bids">Most Bids</option>
+        <option value="least_bids">Least Bids</option>
         <option value="highest">Highest Bid</option>
+        <option value="lowest">Lowest Bid</option>
       </select>
     </div>
   );

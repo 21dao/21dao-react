@@ -1,10 +1,10 @@
 import {
   marketplaceLink,
   marketplaceLogo,
-} from "../../../../utils/marketplaceHelpers";
-import { roundToTwo } from "../../../../utils/roundToTwo";
-import Image from "../../../Image";
-import Video from "../../../Video";
+} from "../../utils/marketplaceHelpers";
+import { roundToTwo } from "../../utils/roundToTwo";
+import Image from "../Image";
+import Video from "../Video";
 import Moment from "react-moment";
 
 export default function ShowAuctions(props) {

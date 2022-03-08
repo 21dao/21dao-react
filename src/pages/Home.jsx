@@ -2,7 +2,7 @@ import MainNavigation from "./nav/MainNavigation";
 import TopSales from "../components/home/TopSales";
 import TopSellers from "../components/home/TopSellers";
 import TopBuyers from "../components/home/TopBuyers";
-import LiveAuctions from "../components/home/LiveAuctions";
+import AllAuctions from "../components/home/AllAuctions";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
           </div>
         </div>
 
-        <LiveAuctions />
+        <AllAuctions />
       </div>
     </div>
   );

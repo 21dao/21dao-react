@@ -1,11 +1,12 @@
 import apiClient from "../client/apiClient";
 import { marketplace } from "./helpers/marketplaceHelper";
 
-async function getMostBids(mrkt) {
+async function getAllAuctions(mrkt, order) {
   try {
-    const response = await apiClient.post("/auctions/most_bids", {
+    const response = await apiClient.post("/auctions/all", {
       marketplace: marketplace(mrkt),
       limit: 8,
+      order: order,
     });
     return response.data.auctions;
   } catch (error) {
@@ -13,4 +14,4 @@ async function getMostBids(mrkt) {
   }
 }
 
-export default getMostBids;
+export default getAllAuctions;
