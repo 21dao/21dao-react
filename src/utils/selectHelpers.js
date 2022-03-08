@@ -91,3 +91,35 @@ export function selectListingsSort(size, callback) {
     </div>
   );
 }
+
+export function selectAuctionView(size, callback) {
+  return (
+    <div className="select-container">
+      <select
+        className={`form-select form-select-${size}
+                  align-middle
+                  inline
+                  px-3
+                  py-1.5
+                  text-lg
+                  font-normal
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  mt-4
+                  ml-4
+                  pr-8
+                  focus:outline-none`}
+        onChange={callback}
+      >
+        <option value="ending" defaultValue>
+          Ending Soon
+        </option>
+        <option value="bids">Most Bids</option>
+        <option value="highest">Highest Bid</option>
+      </select>
+    </div>
+  );
+}

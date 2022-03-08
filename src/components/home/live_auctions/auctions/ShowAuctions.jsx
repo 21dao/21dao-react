@@ -1,42 +1,17 @@
-import React, { useState, useEffect, useCallback } from "react";
-import getEndingSoon from "../../data/leaderboard/getEndingSoon.js";
 import {
   marketplaceLink,
   marketplaceLogo,
-} from "../../utils/marketplaceHelpers";
-import { roundToTwo } from "../../utils/roundToTwo";
-import { selectMarketplace } from "../../utils/selectHelpers";
-import Image from "../Image";
-import Video from "../Video";
+} from "../../../../utils/marketplaceHelpers";
+import { roundToTwo } from "../../../../utils/roundToTwo";
+import Image from "../../../Image";
+import Video from "../../../Video";
 import Moment from "react-moment";
 
-export default function EndingSoon() {
-  const [auctions, setAuctions] = useState([]);
-  const [marketplace, setMarketplace] = useState("all");
-
-  const initGetData = useCallback(async (marketplace) => {
-    try {
-      const res = await getEndingSoon(marketplace);
-      setAuctions(res);
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
-
-  useEffect(() => {
-    initGetData(marketplace);
-  }, [marketplace, initGetData]);
-
-  function changeSelectMarketplace(event) {
-    setMarketplace(event.target.value);
-  }
+export default function ShowAuctions(props) {
+  const auctions = props.auctions;
 
   return (
     <>
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase">
-        Ending Soon
-      </h1>
-      {selectMarketplace("lg", changeSelectMarketplace)}
       <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 items-center">
         {auctions.map((auction, index) => (
           <div
