@@ -17,7 +17,7 @@ export default function AllListings(props) {
 
   useEffect(() => {
     let data = listings.map((listing) => {
-      return { name: listing.brand.name };
+      return { name: listing.name };
     });
     setArtistNames(nameOpts(data));
   }, [listings]);
@@ -71,13 +71,13 @@ export default function AllListings(props) {
             >
               <div className="w-full min-h-80 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none cursor-pointer">
                 <a
-                  href={`https://exchange.art/single/${listing.mintKey}`}
+                  href={`https://exchange.art/single/${listing.mint}`}
                   title=""
                 >
                   {listing.image.split(".").pop().startsWith("mp4") ? (
-                    <Video url={listing.image} mint={listing.mintKey} />
+                    <Video url={listing.image} mint={listing.mint} />
                   ) : (
-                    <Image url={listing.image} mint={listing.mintKey} />
+                    <Image url={listing.image} mint={listing.mint} />
                   )}
                 </a>
               </div>
@@ -86,10 +86,10 @@ export default function AllListings(props) {
                   <h3 className="text-sm font-medium">{listing.name}</h3>
                   <p></p>
                   <p className="mt-1 text-sm">
-                    <span>◎ {listing.lastListedPrice / 1000000000}</span>
-                    {listing.lastSalePrice && (
+                    <span>◎ {listing.last_listed_price / 1000000000}</span>
+                    {listing.last_sale_price && (
                       <span className="float-right text-gray-400">
-                        Last sale ◎ {listing.lastSalePrice / 1000000000}
+                        Last sale ◎ {listing.last_sale_price / 1000000000}
                       </span>
                     )}
                   </p>

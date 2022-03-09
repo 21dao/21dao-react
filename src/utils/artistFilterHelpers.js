@@ -38,11 +38,7 @@ export function searchResultSet(ArtistData, searchNames, searchTags) {
   } else {
     var results = [];
     for (const sel of searchNames) {
-      const items = ArtistData.filter(
-        (item) =>
-          item.name === sel["label"] ||
-          (item.brand && item.brand.name === sel["label"])
-      );
+      const items = ArtistData.filter((item) => item.name === sel["label"]);
       for (const item of items) {
         results.push(item);
       }

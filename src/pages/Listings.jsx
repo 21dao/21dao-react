@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import getListings from "../data/listings/getListings";
 import AllListings from "../components/listings/AllListings";
 import MainNavigation from "./nav/MainNavigation";
-import { Oval } from "react-loader-spinner";
 
 export default function Listings() {
   const [listingsData, setListingsData] = useState();
@@ -29,21 +28,7 @@ export default function Listings() {
           Listings
         </h2>
 
-        {listingsData ? (
-          <AllListings listings={listingsData} />
-        ) : (
-          <div className="flex mt-8">
-            <div className="m-auto">
-              <Oval
-                type="Oval"
-                color="#25c712"
-                secondaryColor="#111"
-                width={35}
-                height={35}
-              />
-            </div>
-          </div>
-        )}
+        {listingsData && <AllListings listings={listingsData} />}
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
-import ArtistData from "./artists.json";
+import apiClient from "../client/apiClient";
 
 async function getArtists() {
   try {
-    return ArtistData;
+    const response = await apiClient.post("/artists/all");
+    return response.data.artists;
   } catch (error) {
     console.log(error);
   }
