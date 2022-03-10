@@ -59,6 +59,17 @@ export default function MainNavigation(props) {
               >
                 Listings
               </a>
+              <a
+                href="/about"
+                title="About"
+                className={`py-4 px-2 font-semibold ${
+                  props.page === "about"
+                    ? "text-gray-200"
+                    : "text-gray-400 hover:text-gray-200"
+                }`}
+              >
+                About
+              </a>
             </div>
           </div>
           {/* <!-- Mobile menu button --> */}
@@ -120,6 +131,17 @@ export default function MainNavigation(props) {
               }`}
             >
               Listings
+            </a>
+            <a
+              href="/about"
+              title="About"
+              className={`block text-sm py-4 px-2 font-semibold ${
+                props.page === "about"
+                  ? "text-black bg-gray-500"
+                  : "text-gray-200 hover:text-black"
+              }`}
+            >
+              About
             </a>
           </li>
         </ul>
