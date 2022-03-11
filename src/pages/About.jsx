@@ -12,7 +12,7 @@ export default function About() {
       <MainNavigation page={"about"} />
       <div className="max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-7 lg:gap-x-8 mb-8 lg:mb-0 px-5">
         <div className="col-span-5 mb-8">
-          <h2 className="text-4xl font-extrabold tracking-tight mb-3">About</h2>
+          <h2 className="text-3xl font-extrabold tracking-tight mb-3">About</h2>
           <p className="mb-4 text-lg">
             21 dao is a non profit organization dedicated to supporting emerging
             creators on Solana. We believe that creators should have the freedom

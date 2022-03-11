@@ -33,10 +33,10 @@ export function tagOpts(ArtistData) {
 }
 
 export function searchResultSet(ArtistData, searchNames, searchTags) {
+  var results = [];
   if (searchNames.length === 0 && searchTags.length === 0) {
-    var results = ArtistData;
+    results = ArtistData;
   } else {
-    var results = [];
     for (const sel of searchNames) {
       const items = ArtistData.filter((item) => item.name === sel["label"]);
       for (const item of items) {

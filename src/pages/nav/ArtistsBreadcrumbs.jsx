@@ -1,17 +1,15 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SigninButton from "./SigninButton";
 
 export default function ArtistsBreadcrumbs() {
-  const navigate = useNavigate();
-
   return (
     <div className="grid grid-cols-4 gap-4">
       <div className="col-span-3">
         <nav className="flex mb-3" aria-label="Breadcrumb">
           <ol className="inline-flex items-center space-x-1 md:space-x-3">
             <li className="inline-flex items-center">
-              <a
-                onClick={() => navigate("/")}
+              <Link
+                to="/"
                 className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 cursor-pointer"
               >
                 <svg
@@ -23,7 +21,7 @@ export default function ArtistsBreadcrumbs() {
                   <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
                 </svg>
                 Home
-              </a>
+              </Link>
             </li>
             <li aria-current="page">
               <div className="flex items-center">
