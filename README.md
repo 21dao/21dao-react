@@ -2,13 +2,13 @@
 
 This is the frontend for the 21 dao website. The 21 dao is a not for profit dao that supports artists and art on the Solana blockchain. Decisions are made by voting/council members of the dao.
 
-## Updating Artists
-
-The primary artist data is stored in a json file while auction and listing data is queried from the 21dao-api. To update the artist data edit `src/data/artists/artists.json`
-
 ## Auction and listing data
 
-Auction and listing data is sourced from Exchange.Art, Formfunction and Holaplex.
+Auction and listing data is sourced from Exchange.Art, Formfunction and Holaplex and is served by the 21 dao API..
+
+## Getting started
+
+This site was created using create-react-app and is able to be served as a static site. To get started developing run `yarn run start`
 
 ## Reuse
 
