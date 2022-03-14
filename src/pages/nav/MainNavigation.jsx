@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import SigninButton from "../../components/SigninButton";
 
 export default function MainNavigation(props) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,6 +74,9 @@ export default function MainNavigation(props) {
               </Link>
             </div>
           </div>
+          <div className="hidden md:flex items-center space-x-3 ">
+            <SigninButton />
+          </div>
           {/* <!-- Mobile menu button --> */}
           <div className="md:hidden flex items-center">
             <button
@@ -144,6 +148,9 @@ export default function MainNavigation(props) {
             >
               About
             </Link>
+            <div className="block text-sm py-4 px-2">
+              <SigninButton />
+            </div>
           </li>
         </ul>
       </div>

@@ -16,6 +16,7 @@
     "react-dnd": "^14.0.4",
     "react-dnd-html5-backend": "^14.0.2",
     "react-dom": "^17.0.2",
+    "react-hot-toast": "^2.2.0",
     "react-infinite-scroll-component": "^6.1.0",
     "react-loader-spinner": "^6.0.0-0",
     "react-moment": "^1.1.1",
