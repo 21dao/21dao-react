@@ -26,8 +26,30 @@ export default function About() {
             shaping a more beautiful world.
           </p>
 
-          <TwitterLink url="https://twitter.com/21dao_" style={style} />
-          <DiscordLink url="https://discord.gg/Z3Z5vV822r" style={style} />
+          <h2 className="text-2xl font-extrabold tracking-tight my-3">
+            Artist Advisor Program
+          </h2>
+
+          <p>
+            21 dao's Artist Advisor Program is an initiative to help 1/1 artists
+            grow and establish themselves by giving them access to 1-on-1
+            sessions with experienced individuals in the Solana ecosystem. You
+            can learn more about the program and schedule time with an
+            advisor&nbsp;
+            <a
+              href="https://21dao.notion.site/21dao-Artist-Advisor-Program-92274218a9db49b2a1197722f1207d10"
+              title="Artist Advisor Program"
+              className="underline"
+            >
+              here
+            </a>
+            .
+          </p>
+
+          <div className="mt-12">
+            <TwitterLink url="https://twitter.com/21dao_" style={style} />
+            <DiscordLink url="https://discord.gg/Z3Z5vV822r" style={style} />
+          </div>
         </div>
       </div>
     </>
