@@ -42,9 +42,10 @@ export default function ShowAuctions(props) {
                 <p className="mt-1 text-sm">
                   <span>
                     ◎{" "}
-                    {auction.highest_bid / 1000000000
+                    {auction.highest_bid
                       ? roundToTwo(auction.highest_bid / 1000000000)
-                      : roundToTwo(auction.reserve / 1000000000)}
+                      : auction.reserve &&
+                        roundToTwo(auction.reserve / 1000000000)}
                   </span>
                   <span className="float-right">
                     Bids {auction.number_bids}
